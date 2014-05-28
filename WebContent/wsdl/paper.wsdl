@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<definitions name="pageService" targetNamespace="http://paper.bitapp.de/page" xmlns="http://schemas.xmlsoap.org/wsdl/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:tns="http://paper.bitapp.de/page" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/">
+  <types>
+    <schema attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://paper.bitapp.de/page" xmlns="http://www.w3.org/2001/XMLSchema">
+			<complexType name="StatusCodeTyp">
+				<sequence>
+					<element name="Code" type="int"/>
+					<element name="Message" type="normalizedString"/>
+				</sequence>
+			</complexType>
+		</schema>
+  </types>
+  <message name="PingRequest">
+    <part name="Status" type="tns:StatusCodeTyp">
+    </part>
+  </message>
+  <message name="PingResponse">
+    <part name="Status" type="tns:StatusCodeTyp">
+    </part>
+  </message>
+  <portType name="pageServicePortType">
+    <operation name="Ping">
+      <input message="tns:PingRequest">
+    </input>
+      <output message="tns:PingResponse">
+    </output>
+    </operation>
+  </portType>
+  <binding name="pageServiceBinding" type="tns:pageServicePortType">
+    <soap:binding style="rpc" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <operation name="Ping">
+      <soap:operation soapAction="Ping" style="rpc"/>
+      <input>
+        <soap:body use="literal" namespace="http://paper.bitapp.de/page"/>
+      </input>
+      <output>
+        <soap:body use="literal" namespace="http://paper.bitapp.de/page"/>
+      </output>
+    </operation>
+  </binding>
+  <service name="pageService">
+    <port name="pageServicePort" binding="tns:pageServiceBinding">
+      <soap:address location="http://localhost:8080/PaperTest1/services/pageServicePort"/>
+    </port>
+  </service>
+</definitions>

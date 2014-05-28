@@ -1,0 +1,10 @@
+<soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/">
+   <soap:Body>
+      <ns1:PingResponse xmlns:ns1="http://paper.bitapp.de/page">
+         <soap:Fault>
+            <faultcode>soap:Server</faultcode>
+            <faultstring>Marshalling Error: UndeclaredPrefix: Cannot resolve 'ns1:StatusCodeTyp' as a QName: the prefix 'ns1' is not declared.</faultstring>
+         </soap:Fault>
+      </ns1:PingResponse>
+   </soap:Body>
+</soap:Envelope>
