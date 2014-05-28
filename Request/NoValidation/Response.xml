@@ -2,8 +2,8 @@
    <soap:Body>
       <ns1:PingResponse xmlns:ns1="http://paper.bitapp.de/page">
          <Status xmlns:ns2="http://paper.bitapp.de/page">
-            <ns2:Code>55</ns2:Code>
-            <ns2:Message>Hello World</ns2:Message>
+            <ns2:Code>123</ns2:Code>
+            <ns2:Message>Testing</ns2:Message>
          </Status>
       </ns1:PingResponse>
    </soap:Body>

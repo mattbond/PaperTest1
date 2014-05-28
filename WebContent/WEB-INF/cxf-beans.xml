@@ -9,10 +9,16 @@
 		wsdlLocation="wsdl/paper.wsdl" endpointName="tns:pageServicePort"
 		serviceName="tns:pageService" address="/pageServicePort">
 
+
+
+
 		<jaxws:properties>
-			<!-- Validation of the SOAP Message -->
 			<entry key="schema-validation-enabled" value="true" />
 		</jaxws:properties>
+
+
+
+
 
 		<jaxws:features>
 			<bean class="org.apache.cxf.feature.LoggingFeature" />

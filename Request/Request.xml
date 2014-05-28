@@ -3,8 +3,8 @@
    <soapenv:Body>
       <page:Ping>
          <Status>
-            <page:Code>55</page:Code>
-            <page:Message>Hello World</page:Message>
+            <page:Code>123</page:Code>
+            <page:Message>Testing</page:Message>
          </Status>
       </page:Ping>
    </soapenv:Body>
